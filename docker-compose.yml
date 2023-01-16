@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  ubuntu:
+    image: self-build-ubuntu:latest
+    build: .
+    container_name: self-build-ubuntu
