@@ -2,4 +2,4 @@ FROM ubuntu:latest
 
 RUN apt update && apt upgrade -y
 
-RUN sleep 5
+RUN sleep 100
