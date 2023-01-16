@@ -40,4 +40,4 @@ jobs:
 
       - run: VAR='test'
 
-      - run: echo ${{ env.VAR }}
+      - run: echo $VAR
