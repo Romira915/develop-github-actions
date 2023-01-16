@@ -37,3 +37,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - run: docker-compose up -d
+
+      - run: VAR='test'
+
+      - run: echo ${{ env.VAR }}
