@@ -3,3 +3,5 @@ FROM ubuntu:latest
 RUN apt update && apt upgrade -y
 
 RUN sleep 30
+
+ENTRYPOINT [ "echo 'debug'" ]
