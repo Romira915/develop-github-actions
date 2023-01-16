@@ -38,6 +38,5 @@ jobs:
 
       - run: docker-compose up -d
 
-      - run: VAR='test'
-
-      - run: echo $VAR
+      - run: echo "VAR=TEST" >> $GITHUB_ENV
+      - run: echo ${{ env.VAR }}
