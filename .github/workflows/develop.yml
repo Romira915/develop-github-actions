@@ -47,13 +47,18 @@ jobs:
         with:
           payload: |
             {
-              "blocks": [
+              "text": "Deployment finished (Completed)",
+              "attachments": [
                 {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
-                  }
+                  "pretext": "Deployment finished",
+                  "color": "28a745",
+                  "fields": [
+                    {
+                      "title": "Status",
+                      "short": true,
+                      "value": "Completed"
+                    }
+                  ]
                 }
               ]
             }
