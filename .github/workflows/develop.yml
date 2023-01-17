@@ -41,9 +41,12 @@ jobs:
       - run: echo "VAR=TEST" >> $GITHUB_ENV
       - run: echo ${{ env.VAR }}
 
+      - run: |
+          false
+
       - name: Slack Notification
         uses: slackapi/slack-github-action@v1.23.0
-        # if: ${{ failure() }}
+        if: ${{ failure() }}
         with:
           payload: |
             {
@@ -51,12 +54,12 @@ jobs:
               "attachments": [
                 {
                   "pretext": "Deployment finished",
-                  "color": "28a745",
+                  "color": "FADBDA",
                   "fields": [
                     {
                       "title": "Status",
                       "short": true,
-                      "value": "Completed"
+                      "value": ${{ job.status }}
                     }
                   ]
                 }
