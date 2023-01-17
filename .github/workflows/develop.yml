@@ -54,7 +54,7 @@ jobs:
               "attachments": [
                 {
                   "pretext": "Deployment finished",
-                  "color": "FADBDA",
+                  "color": "FF0000",
                   "fields": [
                     {
                       "title": "Status",
