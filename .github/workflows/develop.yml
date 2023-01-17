@@ -50,14 +50,14 @@ jobs:
         with:
           payload: |
             {
-              "text": "Deployment finished (Completed)",
+              "text": "",
               "attachments": [
                 {
                   "pretext": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                   "color": "FF0000",
                   "fields": [
                     {
-                      "title": "Status",
+                      "title": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                       "short": true,
                       "value": "${{ job.status }}"
                     }
