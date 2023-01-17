@@ -53,7 +53,7 @@ jobs:
               "text": "Deployment finished (Completed)",
               "attachments": [
                 {
-                  "pretext": "Deployment finished",
+                  "pretext": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                   "color": "FF0000",
                   "fields": [
                     {
