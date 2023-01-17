@@ -50,14 +50,13 @@ jobs:
         with:
           payload: |
             {
-              "text": "",
               "attachments": [
                 {
                   "pretext": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                   "color": "FF0000",
                   "fields": [
                     {
-                      "title": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+                      "title": "Test result",
                       "short": true,
                       "value": "${{ job.status }}"
                     }
