@@ -31,6 +31,7 @@ jobs:
         id: exit_1
 
       - run: echo ${{ steps.exit_1.outcome }}
+        if: failure()
 
       - uses: docker/build-push-action@v3
         with:
