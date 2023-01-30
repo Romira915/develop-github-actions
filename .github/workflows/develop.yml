@@ -30,7 +30,7 @@ jobs:
       - run: false
         id: exit_1
 
-      - run: ${{ steps.exit_1.outcome }}
+      - run: echo ${{ steps.exit_1.outcome }}
 
       - uses: docker/build-push-action@v3
         with:
